@@ -1,5 +1,0 @@
-requests
-sqlite3
-twilio
-schedule
-

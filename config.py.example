@@ -1,0 +1,35 @@
+# config.py.example
+
+# OpenWeather API Configuration
+# Obtenha sua API key em: https://openweathermap.org/appid
+API_KEY = "SUA_API_KEY_AQUI"
+CITY = "Sao Paulo"  # Cidade para monitorar
+COUNTRY = "BR"      # Código do país (ex: US, GB, BR)
+
+# Twilio Configuration for WhatsApp Notifications
+# Suas credenciais Twilio podem ser encontradas em: https://www.twilio.com/console
+TWILIO_ACCOUNT_SID = "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # Seu Account SID da Twilio
+TWILIO_AUTH_TOKEN = "your_auth_token_xxxxxxxxxxxxxxx"  # Seu Auth Token da Twilio
+
+# Números de WhatsApp
+# O número 'FROM' é geralmente o número sandbox da Twilio (whatsapp:+14155238886)
+# ou um número Twilio que você adquiriu e habilitou para WhatsApp.
+TWILIO_WHATSAPP_FROM = "whatsapp:+14155238886"
+
+# O número 'TO' é o seu número pessoal de WhatsApp, incluindo o código do país.
+# Exemplo para um número no Brasil: "whatsapp:+55119XXXXXXXX"
+YOUR_WHATSAPP_TO = "whatsapp:+CODIGOPAISSEUNUMERO"
+
+# Scheduling Intervals (in hours)
+FETCH_INTERVAL_HOURS = 1      # Intervalo para buscar dados meteorológicos
+NOTIFY_INTERVAL_HOURS = 3     # Intervalo para enviar notificações
+
+# Data Retention
+DAYS_TO_KEEP_RECORDS = 30     # Número de dias para manter os registros no banco
+
+# Behavior on Startup
+SEND_NOTIFICATION_ON_STARTUP = False # True para enviar notificação ao iniciar, False para esperar o ciclo
+DISPLAY_TIMEZONE = 'America/Sao_Paulo' # Fuso horário para exibição das horas nas notificações (ver lista: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
+# Certifique-se de renomear este arquivo para 'config.py' e preencher com seus dados reais.
+# O arquivo 'config.py' real NÃO deve ser versionado no Git (já está no .gitignore).

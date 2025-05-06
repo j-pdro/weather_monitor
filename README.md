@@ -50,7 +50,7 @@ Este projeto implementa um pipeline **ETL (Extract, Transform, Load)** que colet
 ### 2. Clonando o Repositório
 
 ```bash
-git clone https://github.com/j-pdro/weather_monitor # Substitua pela URL correta se for diferente
+git clone https://github.com/j-pdro/weather_monitor 
 cd weather_monitor
 ```
 
@@ -105,8 +105,6 @@ SEND_NOTIFICATION_ON_STARTUP = False
 DISPLAY_TIMEZONE = 'America/Sao_Paulo'  # Seu fuso horário local
 ```
 
-**Importante:** O arquivo `config.py` já está no `.gitignore` e não deve ser enviado para o repositório Git.
-
 ### 5. Executando o Monitor
 
 #### a) Via Terminal
@@ -119,7 +117,7 @@ python3 weather.py
 
 O script começará a rodar, exibindo logs no terminal. Ele realizará uma coleta inicial de dados e, em seguida, seguirá os agendamentos definidos. Para parar o script, pressione Ctrl+C no terminal.
 
-#### b) (Opcional) Criando um Atalho na Área de Trabalho (Linux)
+#### b) (Opcional) Criando um Atalho na Área de Trabalho (Linux, como eu uso atualmente)
 
 Para executar o monitor com um clique no Linux:
 
@@ -146,8 +144,8 @@ Categories=Utility;Application;
 Exemplo:
 
 ```desktop
-Exec=/home/oliver/weather_monitor/venv/bin/python /home/oliver/weather_monitor/weather.py
-Path=/home/oliver/weather_monitor/
+Exec=/home/j-pdro/weather_monitor/venv/bin/python /home/j-pdro/weather_monitor/weather.py
+Path=/home/j-pdro/weather_monitor/
 ```
 
 3. Torne-o executável (se necessário):
@@ -219,6 +217,9 @@ O arquivo `weather_data.db` será criado no diretório raiz quando o script for 
 - Blocos `try-except` são usados para capturar exceções durante chamadas de API e outras operações críticas.
 
 ---
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 🤝 Contribuição
 
